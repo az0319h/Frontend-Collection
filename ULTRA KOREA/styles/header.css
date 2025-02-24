@@ -1,4 +1,4 @@
-header {
+#header {
     position: sticky;
     top: 0;
     left: 0;
@@ -9,7 +9,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .header_left {
@@ -291,6 +290,8 @@ header {
 }
 
 /* Scroll Event 발생한 경우 */
+#header.scrollActive {
+}
 .header_left.scrollAvtive .logo {
     padding-top: 15px;
     padding-right: 25px;

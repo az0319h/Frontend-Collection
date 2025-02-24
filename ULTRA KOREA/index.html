@@ -33,13 +33,14 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/index.css">
     <!-- script -->
-    <script src="" defer></script>
+
 </head>
 <body>
     <div class="body_darkBg">
-        <div id="header" class="header"></header>
+        <div id="header"></div>
         <main></main>
         <footer></footer>
         <aside>
@@ -50,10 +51,25 @@
             </a>
         </aside>
     </div>
+    <script defer>
 
-    <script>
-        
+        document.addEventListener("DOMContentLoaded", function() {
+        // header.html을 비동기적으로 로드하여 #header 요소에 삽입
+        fetch('./pages/header.html')
+        .then(response => response.text())
+        .then(data => {
+            // #header에 로드된 내용만 삽입
+            document.getElementById('header').innerHTML = data;
 
+            const script = document.createElement('script');
+            script.src = './scripts/header.js';
+            script.defer = true; // 비동기로 로드
+            document.body.appendChild(script);
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
+        });
+});
     </script>
 </body>
 </html>
