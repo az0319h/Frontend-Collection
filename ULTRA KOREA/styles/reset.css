@@ -1,0 +1,47 @@
+/* 문서내 모든 요소를 선택 */
+* {
+    box-sizing : border-box;
+    color : white;
+}
+/* 최상위 요소인 <html>을 선택한다 */
+:root{
+    /* 원하는 폰트 가져오기 */
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    font-size : 16px;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+h1, h2, h3, h4, h5, h6 , p {
+    font-size : 1rem;
+    margin: 0rem;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color : black;
+}
+img {
+    width : auto;
+    height: auto;
+    display: block; /* 이미지 아래 여백 제거 */
+}
+button {
+    background: transparent;
+    cursor: pointer;
+    padding: 0; 
+    border: 0rem;
+}
+ul,ol,li {
+    list-style: none;
+    margin : 0rem; padding : 0rem;
+}
+input {
+    outline : none; 
+}
+
+input, textarea, select, button, optgroup, option {
+    font-family : inherit;
+}
