@@ -1,0 +1,168 @@
+/* common */
+.auth_container {
+    width: 100%; max-height: 100vh; height : 100%;
+    position : fixed; left : 0px; right : 0px; z-index : 9000;
+    background-color: rgba(25, 25, 25, 0.9);
+    display: flex; justify-content: center; align-items: center;
+    overflow-y: auto; 
+}
+.auth_login, .auth_find_password {
+    display: none;
+}
+.auth_content {
+    max-width : 880px; width : 100%; margin : 0px auto;
+}
+.ibreak {
+    margin-bottom : 45px; width : 100%; height: 1px;   
+    background-image:  linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.5;
+}
+
+/* close button */
+.auth_close_btn {
+    position : absolute;
+    top : 40px; right : 50px;
+}
+.auth_close_btn button img {
+    width : 30px; height : 30px;
+}
+
+/* auth_join  */
+.auth_join {
+    
+}
+.auth_join_img {
+    display: block; margin-bottom : 20px;
+    width : 150px; height: auto;
+}       
+.auth_join form{
+    padding-bottom : 36px;
+}
+.auth_join form ul{
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    row-gap: 36px; column-gap : 36px;
+}
+.auth_join form ul li.auth_form_item {
+    width: 100%; display: flex; flex-direction: column;
+}
+.auth_join form ul li.auth_form_item .auth_label {
+    margin-bottom : 4px; font-size : 12px;
+}
+.auth_join form ul li.auth_form_item input {
+    border : none; background : none;
+    padding : 10px; border-bottom : 0.666667px solid rgb(102, 102, 102);
+    font-size : 18px; line-height: 180%;
+}
+.auth_join form ul li.auth_form_item input:hover {
+    border-bottom-color: white;
+}
+.auth_join form ul li.auth_form_item input:focus {
+    outline : 1px solid rgb(184, 227, 244);
+}
+.auth_join form ul li.auth_form_item select.select { 
+    padding : 10px; font-size : 18px; line-height: 180%;
+    border: 0px !important;
+    border-bottom: 1px solid #666 !important;
+    background: rgba(55, 55, 55, 0.5);
+    color: #fff;
+    outline: none;
+    outline-style: none;
+    cursor : pointer;
+}
+.auth_join form ul li.auth_form_item select.select:focus {
+    background : rgb(0,0,0);
+}
+
+.auth_join form ul li.auth_form_item .birth_container {
+    display: flex;
+}
+.auth_join form ul li.auth_form_item .birthday_container .birthday_span select{
+    padding : 10px;
+    font-size : 18px;
+    border: 0px !important;
+    border-bottom: 1px solid #666 !important;
+    background: rgba(55, 55, 55, 0.5);
+    color: #fff;
+    outline: none;
+    outline-style: none;
+    cursor : pointer;
+}
+.auth_join form ul li.auth_form_item .birthday_container .birthday_span select:focus{
+    background : rgb(0,0,0);
+}
+.auth_join form ul li.auth_form_item .birthday_container .slash {
+    padding : 0px 5px; margin-right : 10px;
+    font-size : 14px; color : rgb(102, 102, 102);
+}
+.auth_join form ul li.auth_form_item .gender_options {
+    display: flex;  gap : 15px;
+}
+.auth_join form ul li.auth_form_item .gender_options label {
+    display: flex; align-items: center; gap : 2px; 
+    padding : 3px; margin-bottom : 4px; cursor : pointer;
+}
+.auth_join form ul li.auth_form_item .gender_options label input {
+    margin : 0px; 
+}
+.auth_join form ul li.auth_form_item .gender_options label .gender_label {
+    font-size : 12px;
+}
+.auth_join form ul li.auth_form_item .gender_options label .fas {
+    font-size : 15.6px;
+}
+.auth_join form ul li.auth_form_item .agree_label {
+    display: flex; align-items: center;
+}
+.auth_join form ul li.last_auth_form_item {
+    grid-column:  span 2; margin-bottom : 36px;
+}
+.auth_join form ul li.last_auth_form_item .agree_label {
+    cursor : pointer;
+}
+.auth_join form ul li.last_auth_form_item .agree_label input {
+    outline: 0px !important;
+}
+.auth_join form ul li.last_auth_form_item .agree_label p {
+    padding-left: 10px; font-size : 14px;
+}
+.auth_join .auth_submit_btn {
+    display: flex; align-items: center;
+    justify-content: center; gap : 5px;
+    color : black; padding : 12px 24px; 
+    background-color : rgb(148, 242, 255);
+    font-size : 14px; font-weight: 700;
+    min-width : 200px; width: auto;
+}
+.auth_join .auth_submit_btn span {
+    color : inherit
+}
+.auth_join .auth_submit_btn:hover {
+    background-color: white;
+}
+.auth_join .auth_submit_btn:hover span {
+    color : black;
+}
+
+@media only screen and (max-width: 1200px) {
+    .auth_container {
+        align-items :start;
+        padding : 30px; 
+    }
+    .auth_content {
+        max-width : 100 ; width : 100%; margin : 0px;
+    }
+    /* close button */
+    .auth_close_btn {
+        top : 30px; right : 50px;
+    }
+    .auth_join form ul{
+        grid-template-columns: repeat(1, 1fr);
+        column-gap : 0px;
+    }
+    .auth_join form ul li.last_auth_form_item {
+        grid-column: auto; 
+    }
+    .mobile_ibreak {
+        margin-bottom : 24px;
+    }
+}
