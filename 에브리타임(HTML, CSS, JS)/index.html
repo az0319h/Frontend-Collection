@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에브리타임</title>
+    
+    <!-- SEO 작업 -->
+    <meta name="description" content="대학생들을 위한 커뮤니티 사이트, 에브리타임. 강의, 학사 일정, 학교 생활 정보 등 다양한 서비스를 제공합니다." />
+    <meta name="author" content="hongsunghoon" />
+    <meta name="keywords" content="대학, 에브리타임, 커뮤니티, 학사 일정, 강의 정보, 학교 생활" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="./images/common/favicon-48x48.ico" type="image/x-icon">
+
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:site_name" content="에브리타임">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com"> <!-- 실제 배포 URL로 교체 필요 -->
+    <meta property="og:title" content="에브리타임 - 대학생 커뮤니티">
+    <meta property="og:image" content="https://everytime.kr/images/og_image.png?t=20231220"> <!-- 실제 OG 이미지 URL로 교체 필요 -->
+    <meta property="og:description" content="에브리타임은 대학생들을 위한 커뮤니티 사이트로, 강의, 학사 일정, 학교 생활 정보 등을 제공합니다. 다양한 정보를 손쉽게 확인할 수 있습니다.">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/14dfbf5c1d.js" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- slick-carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css"> 
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <!-- 스크립트 -->
+    <script src="./scripts/index.js" defer></script>
+    
+</head>
+<body>
+    <main class="main_container">
+        <aside class="sidebar">
+            <div class="login_section">
+                <h1 class="logo">
+                    <img src="images/index/symbol.svg" alt="로고" class="logo1">
+                    <img src="images/index/logo.svg" class="logo2" alt="로고">
+                </h1>
+                <a href="" class="login_link">로그인</a>
+                <a href="" class="signup_link">에브리타임 회원가입</a>
+                <a href="" class="find_id_pw_link">아이디/비밀번호 찾기</a>
+            </div>
+            <div class="community_search">
+                <h2 class="community_title">우리학교 커뮤니티 둘러보기</h2>
+                <input type="text" class="campus_search_input" placeholder="찾으시는 캠퍼스를 검색하세요.">
+            </div>
+            <div class="campus_list">
+                <ul class="campus_list_items">
+                    <!-- 동적으로 생성 -->
+                </ul>
+            </div>
+        </aside>
+        <div class="content_container">
+            <div class="content_container">
+                <aside class="mobile_header">
+                    <img src="./images/index/symbol.svg" alt="">
+                    <button type="button">모바일 웹 이용하기</button>
+                </aside>
+                <section class="intro_section">
+                    <div class="intro_content">
+                        <div class="intro_desc">
+                            <div class="intro_text">
+                                <h1 class="main_title">함께하는 대학생활,<br>에브리타임</h1>
+                                <p class="intro_description">
+                                    에브리타임에서 우리 학교 학생들과 함께<br>
+                                    여러분이 원하는 대학생활을 만들어보세요.
+                                </p>
+                            </div>
+                            <div class="app_download_links">
+                                <a href="#" class="app_link apple_store_link">
+                                    <span class="icon apple_icon"><img src="./images/index/icon_appstore.svg" alt=""></span>
+                                    <span class="logo apple_logo"><img src="./images/index/logo_appstore.svg" alt=""></span>
+                                </a>
+                                <a href="#" class="app_link google_play_link">
+                                    <span class="icon google_icon"><img src="./images/index/icon_playstore.svg" alt=""></span>
+                                    <span class="logo google_logo"><img src="./images/index/logo_playstore.svg" alt=""></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="intro_video">
+                            <video type="video/mp4" autoplay="autoplay" muted="muted" playsinline="" src="/images/index/symbol.mp4" class="content_symbol"></video>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <!-- 다음에 접속하면 여기서부터 개발하기 -->
+                </section>
+            </div>
+        </div>
+    </main>
+    <aside class="expanded">
+        <div class="expanded_header">
+            <button class="expanded_header_button">
+                <img src="./images/index/icon_back.svg" alt="out" class="expanded_header_icon">
+            </button>
+        </div>
+        <div class="expanded_container">
+            <div class="expanded_content">
+                <div class="login_section">
+                    <h1 class="logo">
+                        <img src="images/index/symbol.svg" alt="로고" class="logo1">
+                        <img src="images/index/logo.svg" class="logo2" alt="로고">
+                    </h1>
+                    <a href="" class="login_link">로그인</a>
+                    <a href="" class="signup_link">에브리타임 회원가입</a>
+                    <a href="" class="find_id_pw_link">아이디/비밀번호 찾기</a>
+                </div>
+                <div class="campus_list">
+                    <ul class="campus_list_items">
+                        <!-- 동적으로 생성 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
