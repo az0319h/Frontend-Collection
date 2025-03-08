@@ -1,0 +1,581 @@
+main {
+    display: flex;
+    width: 100%;
+    max-height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 18.75rem; /* 300px */
+    width: 100%;
+    min-height: 100vh; /* 브라우저 높이 */
+    border-right: 0.041667rem solid var(--border-color--);  /* 0.666667px */
+}
+
+.sidebar .login_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.75rem 1.5rem 2.5rem 1.5rem; /* 60px 24px 40px 24px */
+    border-bottom: 0.041667rem solid var(--border-color--); /* 0.666667px */
+}
+
+.sidebar .login_section .logo {
+    display: flex;
+    gap: 0.5rem; /* 8px */
+    margin-bottom: 1.75rem; /* 28px */
+}
+
+.sidebar .login_section .logo img.logo1 {
+    width: 2.375rem; /* 38px */
+    height: 2.375rem; /* 38px */
+}
+
+.sidebar .login_section .logo img.logo2 {
+    width: 9.125rem; /* 146px */
+    height: auto;
+}
+
+.sidebar .login_section .login_link,
+.signup_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem; /* 40px */
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+}
+
+.sidebar .login_section .login_link {
+    border: 0.041667rem solid var(--border-color1--); /* 0.666667px */
+    border-radius: 0.75rem; /* 12px */
+    color: var(--text-join-color--);
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.sidebar .login_section .signup_link {
+    border-radius: 0.75rem; /* 12px */
+    background-color: var(--backgroundColor-color--);
+    color: white;
+    margin-bottom: 0.75rem; /* 12px */
+}
+
+.sidebar .login_section .find_id_pw_link {
+    font-size: 0.75rem; /* 12px */
+    color: var(--font3-color--);
+}
+
+.sidebar .community_search {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 8px */
+    padding: 1.5rem 0.75rem 0.75rem 0.75rem; /* 24px 12px 12px 12px */
+}
+
+.sidebar .community_search .community_title {
+    font-weight: bold;
+    padding-left: 0.75rem; /* 12px */
+    color: var(--font-color--);
+    font-size: 1rem; /* 16px */
+}
+
+.sidebar .community_search .campus_search_input {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 0 0.75rem; /* 0 48px 0 12px */
+    border-radius: 0.75rem; /* 12px */
+    caret-color: var(--caret-color--);
+    border: none;
+    width: 100%;
+    height: 2.75rem; /* 44px */
+    line-height: 1.25rem; /* 20px */
+    color: #292929;
+    font-size: 0.875rem; /* 14px */
+    background-color: #f2f2f2;
+    background-image: url(/images/index/icon_search.svg);
+    background-repeat: no-repeat;
+    background-position: center right 0.75rem; /* 12px */
+    background-size: 1.5rem 1.5rem; /* 24px 24px */
+}
+
+.sidebar .campus_list {
+    flex: 1 1 auto; /* 사용 가능한 공간을 차지하도록 */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 여기서 스크롤이 제대로 동작하도록 설정 */
+}
+
+.sidebar .campus_list .campus_list_items {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto; /* 남는 공간을 차지하게끔 설정 */
+    overflow-y: auto; /* 스크롤을 추가 */
+}
+
+.sidebar .campus_list .campus_list_items a {
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .campus_list .campus_list_items a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar .campus_list .campus_list_items a .campus_name {
+    color: var(--font1-color--);
+    font-size: 0.875rem; /* 14px */
+}
+
+.sidebar .campus_list .campus_list_items a .campus_members {
+    color: var(--font2-color--);
+    font-size: 0.875rem; /* 14px */
+}
+
+/* expanded */
+.expanded {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    background-color: var(--backgroundColor-color-white--);
+}
+
+.expanded_header {
+    padding: 1.125rem 1.5rem; /* 18px 24px */
+}
+
+.expanded_container {
+    max-width: 39.75rem; /* 636px */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1 1 auto;
+}
+
+.expanded_header button {
+    width: 1.5rem; /* 24px */
+    height: auto;
+}
+
+.expanded_container .expanded_content .login_section {
+    padding: 2.5rem 1.5rem; /* 40px 24px */
+}
+
+.expanded_container .expanded_content .login_section .logo {
+    margin-bottom: 1.75rem; /* 28px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+}
+
+.expanded_container .expanded_content a.login_link,
+a.signup_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem; /* 40px */
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+}
+
+.expanded_container .expanded_content a.login_link {
+    border: 0.041667rem solid var(--border-color1--); /* 0.666667px */
+    border-radius: 0.75rem; /* 12px */
+    color: var(--font3-color--);
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.expanded_container .expanded_content .login_section a.signup_link {
+    border-radius: 0.75rem; /* 12px */
+    background-color: var(--backgroundColor-color--);
+    color: white;
+    margin-bottom: 0.75rem; /* 12px */
+}
+
+.expanded_container .expanded_content .login_section .find_id_pw_link {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem; /* 12px */
+    color: var(--font3-color--);
+}
+
+.expanded .campus_list_items {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.expanded .campus_list_items::-webkit-scrollbar {
+    display: none;
+}
+
+.expanded .campus_list .campus_list_items a {
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expanded .campus_list .campus_list_items a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.expanded .campus_list .campus_list_items a .campus_name {
+    color: var(--font1-color--);
+    font-size: 0.875rem; /* 14px */
+}
+
+.expanded .campus_list .campus_list_items a .campus_members {
+    color: var(--font2-color--);
+    font-size: 0.875rem; /* 14px */
+}
+
+.content_container {
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+.mobile_header {
+    display: none;
+}
+
+.intro_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0; /* 40px 0px */
+    background-color: var(--backgroundColor1-color--);
+}
+
+.intro_section .intro_content {
+    max-width: calc(100% - 5rem); /* calc(100% - 80px) */
+    padding: 10rem 7rem; /* 160px 112px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11.75rem; /* 188px */
+    background-color: var(--backgroundColor-color-white--);
+    border-radius: 0.25rem 25rem 25rem 0.25rem; /* 4px 400px 400px 4px */
+    flex: 1 1 auto;
+}
+
+.intro_section .intro_desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_section .intro_desc .main_title {
+    font-size: 3.625rem; /* 58px */
+    font-weight: bold;
+    line-height: 4.725rem; /* 75.4px */
+    margin-bottom: 1rem;
+    color: var(--font-color--);
+}
+
+.intro_section .intro_desc .intro_description {
+    margin-bottom: 2rem;
+    line-height: 1.875rem; /* 30px */
+    font-size: 1.375rem; /* 22px */
+    color: var(--font1-color--);
+}
+
+.intro_section .app_download_links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+}
+
+.intro_section .app_download_links .app_link {
+    background-color: var(--backgroundColor2-color--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+    width: 9.875rem; /* 158px */
+    height: 3.625rem; /* 58px */
+    border-radius: 0.75rem; /* 12px */
+}
+
+.intro_section .intro_video {
+    width: 14.75rem; /* 236px */
+    height: auto;
+}
+
+.intro_section .intro_video video {
+    width: 100%;
+    height: 100%;
+}
+
+/* stats_section */
+.stats_section {
+    /* 필요한 스타일을 추가하세요 */
+}
+
+.stats_section .stats_content {
+    max-width: 71.25rem; /* 1140px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 7.5rem 0; /* 120px 0px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats_content .stats_title {
+    margin-bottom: 0.75rem; /* 12px */
+    color: var(--font-color--);
+    font-size: 3rem; /* 48px */
+    font-weight: 700;
+    line-height: 3.9rem; /* 62.4px */
+    text-align: center;
+}
+
+.stats_content .stats_description {
+    line-height: 1.875rem; /* 30px */
+    font-size: 1.375rem; /* 22px */
+    color: var(--font1-color--);
+    text-align: center;
+}
+
+.stats_content .stats_info {
+    max-width: 65.25rem; /* 1044px */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem; /* 40px */
+    padding: 3rem 6rem; /* 48px 96px */
+    border-radius: 31.25rem; /* 500px */
+    background-color: var(--backgroundColor1-color--);
+}
+
+.stats_content .stats_info .stat_separator {
+    width: 0.125rem; /* 2px */
+    height: 1.25rem; /* 20px */
+    background-color: var(--border-color1--);
+    border: none;
+    margin: 0;
+}
+
+.stats_content .stats_info .stat_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 8.75rem; /* 140px */
+    width: auto;
+}
+
+.stats_content .stats_info .stat_item .stat_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats_content .stats_info .stat_item .stat_icon .stat_label {
+    margin-bottom: 0.75rem; /* 12px */
+    line-height: 1.5rem; /* 24px */
+    font-size: 1rem; /* 16px */
+    font-weight: bold;
+    color: var(--font3-color--);
+}
+
+.stats_content .stats_info .stat_item .stat_text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.stats_content .stats_info .stat_item .stat_text .stat_value {
+    margin-right: 0.125rem; /* 2px */
+    color: var(--font-color--);
+    font-size: 2.375rem; /* 38px */
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+    height: 100%;
+}
+
+.stats_content .stats_info .stat_item .stat_text .stat_unit {
+    color: var(--font1-color--);
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1440px) {
+    .sidebar {
+        display: none;
+    }
+
+    .mobile_header {
+        position: sticky;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        padding: 0.75rem 0.75rem 0.75rem 1.5rem; /* 12px 12px 12px 24px */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--backgroundColor-color-white--);
+    }
+
+    .mobile_header img {
+        width: 1.75rem; /* 28px */
+        height: 1.75rem; /* 28px */
+    }
+
+    .mobile_header button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0.75rem; /* 8px 12px */
+        background-color: var(--backgroundColor-color--);
+        border-radius: 0.5rem; /* 8px */
+        color: var(--font-color-white--);
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .intro_section {
+        padding: 0;
+        background-color: var(--backgroundColor-color-white--);
+    }
+
+    .intro_section .intro_content {
+        max-width: 39.75rem; /* 636px */
+        padding: 3.75rem 0;
+        flex-direction: column-reverse;
+        gap: 0;
+        background-color: var(--backgroundColor-color-white--);
+        border-radius: 0;
+    }
+
+    .intro_section .intro_video {
+        width: 9.5rem; /* 152px */
+        margin-bottom: 2rem;
+    }
+
+    .intro_section .intro_desc .main_title {
+        font-size: 1.75rem; /* 28px */
+        line-height: auto;
+        margin-bottom: 0.75rem; /* 12px */
+        text-align: center;
+        line-height: 2.275rem; /* 36.4px */
+    }
+
+    .intro_section .intro_desc .intro_description {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.25rem; /* 20px */
+        text-align: center;
+    }
+
+    .intro_section .app_download_links .app_link {
+        width: 7.5rem; /* 120px */
+        height: 2.75rem; /* 44px */
+    }
+
+    .intro_section .app_download_links .apple_store_link .icon img {
+        width: 0.96rem; /* 15.4px */
+        height: auto;
+    }
+
+    .intro_section .app_download_links .apple_store_link .logo img {
+        width: 3.8rem; /* 60.8px */
+        height: auto;
+    }
+
+    .intro_section .app_download_links .google_play_link .icon img {
+        width: 1.06rem; /* 17px */
+        height: auto;
+    }
+
+    .intro_section .app_download_links .google_play_link .logo img {
+        width: 4.25rem; /* 68px */
+        height: auto;
+    }
+
+    /* stats_section */
+    .stats_section {
+        /* 여기에 필요한 스타일을 추가하세요 */
+    }
+
+    .stats_section .stats_content {
+        max-width: 39.75rem; /* 636px */
+        padding: 3.75rem 1.5rem; /* 60px 24px */
+    }
+
+    .stats_content .stats_title {
+        font-size: 1.5rem; /* 24px */
+        line-height: 1.95rem; /* 31.2px */
+    }
+
+    .stats_content .stats_description {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.25rem; /* 20px */
+    }
+
+    .stats_content .stats_info {
+        max-width: 36.75rem; /* 588px */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 1.75rem; /* 28px */
+        padding: 1.5rem; /* 24px */
+        border-radius: 0.75rem; /* 12px */
+        gap: 1.25rem; /* 20px */
+    }
+
+    .stats_content .stats_info .stat_separator {
+        display: none;
+    }
+
+    .stats_content .stats_info .stat_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 100%;
+    }
+
+    .stats_content .stats_info .stat_item .stat_icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .stats_content .stats_info .stat_item .stat_icon img {
+        width: 1.5rem; /* 24px */
+        height: 1.5rem; /* 24px */
+        margin-right: 0.5rem; /* 8px */
+    }
+
+    .stats_content .stats_info .stat_item .stat_icon .stat_label {
+        margin-bottom: 0;
+        line-height: 0;
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .stats_content .stats_info .stat_item .stat_text {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .stats_content .stats_info .stat_item .stat_text .stat_value {
+        margin-right: 0.125rem; /* 2px */
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .stats_content .stats_info .stat_item .stat_text .stat_unit {
+        font-size: 0.75rem; /* 12px */
+    }
+
+}

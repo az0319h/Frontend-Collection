@@ -1,0 +1,22 @@
+:root {
+    /* border-color */
+    --border-color--: rgb(242, 242, 242);
+    --border-color1-- : rgb(237, 237, 237);
+
+    /* background-color */
+    --backgroundColor-color-white-- : white;
+    --backgroundColor-color-black-- :black;
+    --backgroundColor-color-- : rgb(249, 31, 21);
+    --backgroundColor1-color-- : rgb(249, 249, 249);
+    --backgroundColor2-color-- : rgb(41, 41, 41); 
+
+    /* font-color */
+    --caret-color-- : rgb(249, 31, 21);
+    --font-color-white-- : white;
+    --font-color-black-- : black;
+    --font-color-- : rgb(41, 41, 41); 
+    --font1-color-- : rgb(68, 68, 68);
+    --font2-color-- : rgb(166, 166, 166);
+    --font3-color-- : rgb(115, 115, 115);
+
+}
