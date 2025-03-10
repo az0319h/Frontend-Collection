@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 에브리타임</title>
+    
+    <!-- SEO 작업 -->
+    <meta name="description" content="대학생들을 위한 커뮤니티 사이트, 에브리타임. 강의, 학사 일정, 학교 생활 정보 등 다양한 서비스를 제공합니다." />
+    <meta name="author" content="hongsunghoon" />
+    <meta name="keywords" content="대학, 에브리타임, 커뮤니티, 학사 일정, 강의 정보, 학교 생활" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="/images/common/favicon-48x48.ico" type="image/x-icon">
+
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:site_name" content="에브리타임">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com"> <!-- 실제 배포 URL로 교체 필요 -->
+    <meta property="og:title" content="에브리타임 - 대학생 커뮤니티">
+    <meta property="og:image" content="https://everytime.kr/images/og_image.png?t=20231220"> <!-- 실제 OG 이미지 URL로 교체 필요 -->
+    <meta property="og:description" content="에브리타임은 대학생들을 위한 커뮤니티 사이트로, 강의, 학사 일정, 학교 생활 정보 등을 제공합니다. 다양한 정보를 손쉽게 확인할 수 있습니다.">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/14dfbf5c1d.js" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- slick-carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/common.css"> 
+    <link rel="stylesheet" href="/styles/login.css">
+
+    <!-- 스크립트 -->
+    <script src="/scripts/login.js" defer></script>
+</head>
+
+<body>
+    <div class="login_container">
+        <h1 class="login_header">
+            <img src="https://account.everytime.kr/images/pages/login/logo_light.png" alt="에브리타임 로고" class="logo">
+        </h1>
+        <form action="" method="get" class="login_form">
+            <input type="text" class="login_input_text input_white" placeholder="아이디" >
+            <input type="password" class="login_input_password input_white" placeholder="비밀번호" >
+            <input type="submit" class="login_submit" value="에브리타임 로그인">
+            <div class="login_options">
+                <p class="stay_logged_in_label">
+                    <button type="button" class=""><img src="https://account.everytime.kr/images/common/icn_e_check_mini_off_light.svg" alt=""></button>
+                    <span class="stay_logged_in_text">로그인 유지</span>
+                </p>
+                <a href="/pages/forgot/id.html" class="forgot_link">아이디/비밀번호 찾기</a>
+            </div>
+        </form>
+        <div class="signup_link_container">
+            <a href="" class="signup_link">회원가입</a>
+        </div>
+        <footer class="footer">
+            <a href="" class="footer_link">이용약관</a>
+            <a href="" class="footer_link footer_pri">개인정보처리방침</a>
+            <a href="" class="footer_link">문의하기</a>
+            <a href="" class="footer_link footer_copyright">© 에브리타임</a>
+        </footer>
+    </div>
+</body> 
+</html>

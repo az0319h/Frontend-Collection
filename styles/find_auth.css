@@ -1,0 +1,92 @@
+.section_find {
+    border: 1px solid var(--border-color1--);
+    border-radius: 0.75rem; /* 12px */
+    max-width: 30rem; /* 480px */
+    width: 100%;
+    margin: 1.5rem auto; /* 24px */
+}
+
+.section_find .header_links {
+    margin-top: 1.5rem; /* 24px */
+    padding-left: 1rem; /* 16px */
+    display: flex;
+    align-items: center;
+}
+
+.section_find .header_links a {
+    padding: 0.5rem 0.5rem 0.875rem 0.5rem; /* 8px 8px 14px 8px */
+    line-height: 1.5rem; /* 24px */
+    color: var(--font2-color--);
+    font-size: 1rem; /* 16px */
+}
+
+.section_find .header_links a span {
+    color: inherit;
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0); /* 2px solid rgba(0, 0, 0, 0) */
+}
+
+.section_find .header_links a.visible {
+    color: var(--font4-color--);
+    border-bottom-color: var(--border-color2--);
+    font-weight: bold;
+}
+
+.section_find .header_links a.visible span {
+    border-bottom-color: var(--border-color2--);
+}
+
+.section_find form {
+    padding: 1.5rem; /* 24px */
+    display: flex;
+    flex-direction: column;
+}
+
+.section_find form input {
+    padding: 0.5rem; /* 8px */
+    border: 1px solid var(--border-color1--);
+    line-height: 1.5rem; /* 24px */
+    color: #292929;
+    font-size: 1rem; /* 16px */
+    background-color: var(--backgroundColor1-color--);
+    border-radius: 0.75rem; /* 12px */
+    width: 100%;
+    height: 2.5rem; /* 40px */
+    caret-color: var(--caret-color--);
+}
+
+.section_find form input.visible {
+    background-color: var(--backgroundColor-color-white--);
+}
+
+.section_find form button {
+    margin-top: 0.5rem; /* 8px */
+    border-radius: 0.75rem; /* 12px */
+    width: 100%;
+    height: 2.5rem; /* 40px */
+    color: var(--font-color-white--);
+    font-size: 1rem; /* 16px */
+    font-weight: bold;
+    background-color: var(--backgroundColor-color--);
+}
+
+.section_find .information {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem; /* 24px */
+}
+
+.section_find .information .info_message {
+    margin-bottom: 0.25rem; /* 4px */
+    line-height: 1.125rem; /* 18px */
+    color: var(--font3-color--);
+    font-size: 0.75rem; /* 12px */
+}
+
+@media screen and (max-width: 37.5rem) { /* 600px */
+    .section_find {
+        border: none;
+        border-radius: none;
+        max-width: 100%;
+        margin: 0;
+    }
+}
